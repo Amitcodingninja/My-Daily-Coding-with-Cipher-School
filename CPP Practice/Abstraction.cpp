@@ -2,12 +2,13 @@
 using namespace std;
 class myBank
 {
+private:
+    int atmPIN, Balance;
+
 public:
     string bName, IFSE;
     int accNumber;
 
-private:
-    int atmPIN, Balance;
     void input()
     {
         atmPIN = 1234;
@@ -28,9 +29,16 @@ private:
     }
 };
 int main()
-{
+{ // 50% Secure
     myBank m;
     m.input();
     m.output();
+
+    cout << "Another Person want to access the account" << endl;
+    cout << m.accNumber << endl;
+    cout << m.bName << endl;
+    cout << m.IFSE << endl;
+    // cout <<m.atmPIN << endl;
+    // cout <<m.Balance << endl;
     return 0;
 }
